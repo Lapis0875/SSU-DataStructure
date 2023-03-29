@@ -9,5 +9,12 @@ int main(void)
     const int &ref2 = 50;
 
     cout << ref2 << endl;
+
+    const int *ptr = &num;
+    const int *&refptr = ptr;
+
+    *refptr++;
+    cout << num << endl;
+
     return 0;
 }
