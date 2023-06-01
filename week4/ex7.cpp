@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstring>
 
 using std::cout;
 using std::endl;
@@ -11,8 +10,10 @@ private:
 public:
     Point(int x = 0, int y = 0) : xpos(x), ypos(y) {}
     
-    void showPosition() const
+    void showPosition() const       // Q1. 함수 뒤 const의 의미?
     {
+        // When you add the const keyword to a method the this pointer will essentially become a pointer to const object,
+        // and you cannot therefore change any member data.
         cout << '[' << xpos << ',' << ypos << ']' << endl;
     }
 
